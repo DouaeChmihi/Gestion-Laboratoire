@@ -26,6 +26,7 @@ public class SecConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeExchange(auth -> auth
+                        .pathMatvhers("")
                         .pathMatchers("/ENSEIGNANT-SERVICE/Enseignants/email/{id}").permitAll()
                         .pathMatchers("/ENSEIGNANT-SERVICE/Enseignants/**").hasAuthority("SCOPE_Enseignant")
                         .pathMatchers("/CHERCHEUR-SERVICE/Chercheurs/email/{id}").permitAll()
